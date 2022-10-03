@@ -10,5 +10,9 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.2.0",
+    "itty-router": "^2.6.6"
   }
 }
