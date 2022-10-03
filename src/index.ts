@@ -9,7 +9,10 @@
  */
 
 import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
+import manifestJSON from '__STATIC_CONTENT_MANIFEST'
 import data from "../data.json";
+
+let manifest = JSON.parse(manifestJSON)
 
 export interface Env {
   __STATIC_CONTENT: string;
@@ -42,7 +45,7 @@ export default {
       },
       {
         ASSET_NAMESPACE: env.__STATIC_CONTENT,
-        // ASSET_MANIFEST: assetManifest,
+        ASSET_MANIFEST: manifest,
       }
     );
   },

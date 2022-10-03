@@ -1,0 +1,1 @@
+declare type  __STATIC_CONTENT_MANIFEST   = string
