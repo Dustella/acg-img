@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Img</title>
   </head>
-  <body></body>
+  <body>
+    <h4>https://acg-img.dustella.workers.dev/api</h4>
+  </body>
   <script type="module">
     const res = await fetch("https://acg-img.dustella.workers.dev/api").then((response) => response.json());
     document.body.style.setProperty("background-image",`url(${res.url})`)
@@ -14,12 +16,29 @@
   <style>
     html,body{
         margin: 0;
-        height: 60%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     * {
+        background-color: rgba(69, 65, 65, 0.886);
+        background-blend-mode: multiply;
         background-repeat: no-repeat;
-        /* background-position: center; */
-        background-size:auto;
+        background-position: center;
+        background-size:cover;
+    
+    }
+    h4{
+      height: 20px;
+      text-align: center;
+      color: rgb(29, 70, 135);
+      padding: 1.2rem;
+      background-color:rgba(253, 185, 84, 0.854);
+      border-radius: 1rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 300;
     }
   </style>
 </html>
