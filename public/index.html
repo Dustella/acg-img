@@ -7,10 +7,10 @@
     <title>Img</title>
   </head>
   <body>
-    <h4>https://acg-img.dustella.workers.dev/api</h4>
+    <h4>https://acg-img.dustella.net/api</h4>
   </body>
   <script type="module">
-    const res = await fetch("https://acg-img.dustella.workers.dev/api").then((response) => response.json());
+    const res = await fetch("https://acg-img.dustella.net/api").then((response) => response.json());
     document.body.style.setProperty("background-image",`url(${res.url})`)
   </script>
   <style>
