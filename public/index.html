@@ -10,41 +10,45 @@
   <body>
     <h1>就是一个 ACG 图床接口</h1>
     <h4>https://acg-img.dustella.net/api</h4>
+    <h4>https://acg-img.dustella.net/cats</h4>
     <p>本站由 Dustella 用爱维护</p>
   </body>
   <script type="module">
-    const res = await fetch("https://acg-img.dustella.net/api").then((response) => response.json());
-    document.body.style.setProperty("background-image",`url(${res.url})`)
+    const res = await fetch("https://acg-img.dustella.net/api").then(
+      (response) => response.json()
+    );
+    document.body.style.setProperty("background-image", `url(${res.url})`);
   </script>
   <style>
-    html,body{
-        margin: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     body {
-        background-color: rgba(69, 65, 65, 0.886);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size:cover;
-    
+      background-color: rgba(69, 65, 65, 0.886);
+      background-blend-mode: multiply;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
     h4 {
       height: 20px;
       text-align: center;
       color: rgb(29, 70, 135);
       padding: 1.2rem;
-      background-color:rgba(253, 185, 84, 0.854);
+      background-color: rgba(253, 185, 84, 0.854);
       border-radius: 1rem;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: "Courier New", Courier, monospace;
       font-weight: 300;
     }
-    h1,p  {
+    h1,
+    p {
       /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
       color: rgba(255, 255, 255, 0.758);
     }
